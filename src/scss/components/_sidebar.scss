@@ -1,0 +1,60 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    min-width: 16rem;
+    height: 100vh;
+    background: $mainBlue;
+    color: $white;
+
+    &__logo {
+        height: 1.5rem;
+        margin: 1rem 0 4.5rem 1.5rem;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__list {
+        padding: 0;
+    }
+
+    &__item {
+        position: relative;
+        margin-bottom: 0.5rem;
+        
+        
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: $border;
+            opacity: 0;
+
+            
+        }
+
+        &:hover {
+            background: $onHover;
+
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        a {
+            display: flex;
+            font-weight: 500;
+            padding: 1rem 1.5rem;
+            text-transform: uppercase;
+            color: $white;
+
+            img {
+                margin-right: 1rem;
+            }
+        }
+    }
+}

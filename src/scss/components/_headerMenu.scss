@@ -1,0 +1,32 @@
+@import '../variables';
+
+.headerMenu {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 1.5rem;
+    
+    span {
+        margin-left: 1.5rem;
+        font-size: 0.75rem;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        a {
+            color: $grey;
+
+            &:hover {
+                color: $border;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__bell {
+        svg {
+            margin-right: 0.4rem;
+            color: red;
+        }
+    }
+}
